@@ -20,7 +20,7 @@ defined('_JEXEC') or die;
  * Module chrome for rendering the module in a submenu
  */
 
-function modChrome_no($module, &$params, &$attribs)
+function modChrome_onlycontent($module, &$params, &$attribs)
 {
 	if ($module->content)
 	{
@@ -28,11 +28,12 @@ function modChrome_no($module, &$params, &$attribs)
 	}
 }
 
-function modChrome_well($module, &$params, &$attribs)
+function modChrome_nice($module, &$params, &$attribs)
 {
 	if ($module->content)
 	{
-		echo "<div class=\"well " . htmlspecialchars($params->get('moduleclass_sfx')) . "\">";
+		echo "<div class=\"module-nice ", htmlspecialchars($params->get('moduleclass_sfx')), "\">";
+		echo "<div class=\"module-corner\"></div>";
 		if ($module->showtitle)
 		{
 			echo "<h4 class=\"module-header\">" . $module->title . "</h4>";
