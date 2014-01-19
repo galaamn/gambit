@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.0" type="template" client="site">
-	<name>JExtBOX Gambit</name>
+	<name>Gambit</name>
 	<version>1.0</version>
 	<creationDate>19/01/2014</creationDate>
 	<author>Galaa</author>
@@ -10,9 +10,11 @@
 	<description>A start-up template for Joomla 3.0</description>
 	<files>
 		<filename>index.php</filename>
+		<filename>favicon.ico</filename>
 		<folder>css</folder>
 		<folder>js</folder>
 		<folder>images</folder>
+		<folder>html</folder>
 	</files>
 	<positions>
 		<position>debug</position>
@@ -28,9 +30,7 @@
 		<position>position-9</position>
 		<position>position-10</position>
 		<position>position-11</position>
-		<position>position-12</position>
-		<position>position-13</position>
-		<position>position-14</position>
+		<position>footer</position>
 	</positions>
 <config>
 </config>
