@@ -1,6 +1,30 @@
+@font-face
+{
+	font-family: monbookmanoldstyle;
+	src: url('../font/monbookmanoldstyle.ttf');
+}
 body {
+	font-family: monbookmanoldstyle;
 	background-image:url('../images/background.jpg');
 	background-repeat:repeat;
+}
+h1 {
+	font-size:150%;
+}
+h2 {
+	font-size:140%;
+}
+h3 {
+	font-size:130%;
+}
+h4 {
+	font-size:120%;
+}
+h5 {
+	font-size:110%;
+}
+h6 {
+	font-size:100%;
 }
 .header {
 	background-image:url('../images/header.png');
@@ -10,21 +34,35 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
-.blog .page-header {
+.blog .items-leading > div:not(:last-child) {
 	border:0px solid transparent;
 	border-bottom: 10px solid transparent;
-	-webkit-border-image:url('../images/article-header-bottom-border.png') 30 30 round; /* Safari 5 */
-	-o-border-image:url('../images/article-header-bottom-border.png') 30 30 round; /* Opera */
-	border-image:url('../images/article-header-bottom-border.png') 30 30 round;
+	-webkit-border-image:url('../images/article-bottom-border.png') 30 30 round; /* Safari 5 */
+	-o-border-image:url('../images/article-bottom-border.png') 30 30 round; /* Opera */
+	border-image:url('../images/article-bottom-border.png') 30 30 round;
+	padding-bottom:15px;
+	margin-bottom:35px;
 }
-.blog, .module-nice {
+.blog .page-header, .item-page .page-header {
+	border:0px solid transparent;
+}
+.blog > div:nth-child(2) {
+	border:0px solid transparent;
+	border-top: 10px solid transparent;
+	-webkit-border-image:url('../images/article-bottom-border.png') 30 30 round; /* Safari 5 */
+	-o-border-image:url('../images/article-bottom-border.png') 30 30 round; /* Opera */
+	border-image:url('../images/article-bottom-border.png') 30 30 round;
+	padding-top:35px;
+	margin-top:15px;
+}
+.blog, .module-nice, .item-page {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-khtml-border-radius: 5px;
 	border-radius: 5px;
 	background:#fff;
 	border:1px solid #ddd;
-	padding:5px 25px 20px 25px;
+	padding:35px 35px 20px 35px;
 	margin:0px 0px 10px 0px;
 }
 .module-nice {
@@ -40,11 +78,8 @@ body {
 	width:50px;
 }
 .module-nice .module-header{
-	margin:30px 5px 25px 10px;
+	margin:0px 0px 25px 0px;
 	text-align:center;
-}
-.module-nice ul{
-	margin-left:0px;
 }
 .flags {
 	position:fixed;
@@ -60,28 +95,12 @@ body {
 .search label {
 	visibility:hidden;
 }
-
-.mostread,
-.weblinks,
-.category-module,
-.syndicate-module,
-ul.nav.menu,
-#login-form {
-/*	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-khtml-border-radius: 5px;
-	border-radius: 5px;
-	background:#eee;
-	border:1px solid #ccc;
-	padding:5px;
-	margin:0px 0px 10px 0px;
-*/
+.breadcrumb {
+	background:none;
 }
-.mostread, 
-.weblinks, 
-.category-module {
-	padding:0px 0px 0px 20px; 
-} 
-.syndicate-module {
-	display:block; 
+.breadcrumb .ger {
+	content:url('../images/ger.png');
+}
+.breadcrumb .horse {
+	content:url('../images/horse.gif');
 }

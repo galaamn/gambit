@@ -36,7 +36,7 @@ function modChrome_nice($module, &$params, &$attribs)
 		echo "<div class=\"module-corner\"></div>";
 		if ($module->showtitle)
 		{
-			echo "<h4 class=\"module-header\">" . $module->title . "</h4>";
+			echo "<h3 class=\"module-header\">" . $module->title . "</h3>";
 		}
 		echo $module->content;
 		echo "</div>";
