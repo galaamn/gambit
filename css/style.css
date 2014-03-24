@@ -3,11 +3,13 @@
 	font-family: monbookmanoldstyle;
 	src: url('../font/monbookmanoldstyle.ttf');
 }
+/* Body */
 body {
 	font-family: monbookmanoldstyle;
 	background-image:url('../images/background.jpg');
 	background-repeat:repeat;
 }
+/* Typograph */
 h1 {
 	font-size:150%;
 }
@@ -26,6 +28,7 @@ h5 {
 h6 {
 	font-size:100%;
 }
+/* Header */
 .header {
 	background-image:url('../images/header.png');
 	background-repeat:no-repeat;
@@ -34,28 +37,40 @@ h6 {
 	margin-left:auto;
 	margin-right:auto;
 }
-.blog .items-leading > div:not(:last-child) {
-	border:0px solid transparent;
-	border-bottom: 10px solid transparent;
-	-webkit-border-image:url('../images/article-bottom-border.png') 30 30 round; /* Safari 5 */
-	-o-border-image:url('../images/article-bottom-border.png') 30 30 round; /* Opera */
-	border-image:url('../images/article-bottom-border.png') 30 30 round;
-	padding-bottom:15px;
-	margin-bottom:35px;
+/* Content Joomla core component */
+@media (min-width: 768px) {
+	.component > div .items-leading, .component > div .items-row {
+		border:0px solid transparent;
+		border-bottom: 10px solid transparent;
+		-webkit-border-image:url('../images/article-bottom-border.png') 30 30 round; /* Safari 5 */
+		-o-border-image:url('../images/article-bottom-border.png') 30 30 round; /* Opera */
+		border-image:url('../images/article-bottom-border.png') 30 30 round;
+		padding-bottom:35px;
+		margin-bottom:15px;
+	}
 }
-.blog .page-header, .item-page .page-header {
+@media (max-width: 767px) {
+	.component > div .items-leading, .component > div .items-row .item {
+		border:0px solid transparent;
+		border-bottom: 10px solid transparent;
+		-webkit-border-image:url('../images/article-bottom-border.png') 30 30 round; /* Safari 5 */
+		-o-border-image:url('../images/article-bottom-border.png') 30 30 round; /* Opera */
+		border-image:url('../images/article-bottom-border.png') 30 30 round;
+		padding-bottom:35px;
+		margin-bottom:15px;
+	}
+}
+.item-page {
+	margin-top:-10px;
+}
+.page-header {
 	border:0px solid transparent;
 }
-.blog > div:nth-child(2) {
+.component > div .items-more > ol > li > a {
 	border:0px solid transparent;
-	border-top: 10px solid transparent;
-	-webkit-border-image:url('../images/article-bottom-border.png') 30 30 round; /* Safari 5 */
-	-o-border-image:url('../images/article-bottom-border.png') 30 30 round; /* Opera */
-	border-image:url('../images/article-bottom-border.png') 30 30 round;
-	padding-top:35px;
-	margin-top:15px;
 }
-.blog, .module-nice, .item-page {
+/* Modules & Component */
+.module-nice, .component {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-khtml-border-radius: 5px;
@@ -63,7 +78,7 @@ h6 {
 	background:#fff;
 	border:1px solid #ddd;
 	padding:35px 35px 20px 35px;
-	margin:0px 0px 10px 0px;
+	margin:0px 0px 20px 0px;
 }
 .module-nice {
 	position:relative;
@@ -81,12 +96,14 @@ h6 {
 	margin:0px 0px 25px 0px;
 	text-align:center;
 }
+/* Mongolian Old Style Flag */
 .flags {
 	position:fixed;
 	bottom:0px;
 	right:25px;
 	z-index:-1;
 }
+/* Search */
 .search {
 	position:absolute;
 	top:0px;
@@ -95,6 +112,7 @@ h6 {
 .search label {
 	visibility:hidden;
 }
+/* Breadcrumbs */
 .breadcrumb {
 	background:none;
 }
@@ -104,3 +122,4 @@ h6 {
 .breadcrumb .horse {
 	content:url('../images/horse.gif');
 }
+/*  */

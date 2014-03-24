@@ -110,7 +110,9 @@ switch (($this->countModules('position-7') > 0) + ($this->countModules('position
 			<div class='<?php echo $span_component; ?>'>
 				<jdoc:include type="modules" name="position-5" title="Banner" style="xhtml" />
 				<jdoc:include type="message" />
-				<jdoc:include type="component" />
+				<div class="component">
+					<jdoc:include type="component" />
+				</div>
 				<jdoc:include type="modules" name="position-6" title="Breadcrumb" style="onlycontent" />
 			</div>
 			<?php if ($this->countModules('position-8')) : ?>
